@@ -1,0 +1,54 @@
+%column {
+	display: flex;
+	flex-direction: column;
+}
+
+.filter {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.form {
+		font-family: inherit;
+		width: 30em;
+		height: 20em;
+		padding: 2em;
+		background: rgb(206, 231, 231);
+		border-radius: 3px;
+		box-shadow: 3px 3px 30px rgb(66, 65, 65);
+		@extend %column;
+		align-items: center;
+		justify-content: space-between;
+
+		.data {
+			width: 20em;
+			height: 7em;
+			@extend %column;
+			justify-content: space-around;
+
+			label {
+				@extend %column;
+
+				span {
+					margin-bottom: .1em;
+				}
+			}
+		}
+
+		.btnPanel {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			a {
+				font-size: .8em;
+			}
+		}
+	}
+}

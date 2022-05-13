@@ -1,0 +1,22 @@
+.block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.nav {
+		width: 100%;
+		max-width: 80em;
+		height: 4em;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		background: rgb(78, 145, 145);
+		border-radius: 0 0 2em 2em;
+
+		.links {
+			display: flex;
+			justify-content: space-between;
+			width: 35em;
+		}
+	}
+}
