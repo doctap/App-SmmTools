@@ -25,14 +25,12 @@ function App() {
 	};
 
 	const createPost = (newPost) => {
-		setPosts([...posts, newPost])
+		setPosts([...posts, newPost]) 
 	};
 
 	const removePost = (post) => {
 		setPosts(posts.filter(p => p.id !== post.id))
 	};
-
-
 
 	return (
 		<div className="App">
