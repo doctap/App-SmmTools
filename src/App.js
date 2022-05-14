@@ -24,7 +24,7 @@ function App() {
 		setPosts([...posts].sort((a, b) => a[sort].localeCompare(b[sort])))
 	};
 
-	const createPost = (newPost) => {
+	const createPost = (newPost) => { 
 		setPosts([...posts, newPost]) 
 	};
 
@@ -36,7 +36,7 @@ function App() {
 		<div className="App">
 			<PanelNav></PanelNav>
 
-			<MyInput 
+			<MyInput // time point 1:10:00
 				value={searchQuery}
 				onChange={event => setSearchQueary(event.target.value)}
 				placeholder='Search'
