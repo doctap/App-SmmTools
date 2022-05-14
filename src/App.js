@@ -24,10 +24,6 @@ function App() {
 		setPosts([...posts].sort((a, b) => a[sort].localeCompare(b[sort])))
 	};
 
-	const createPost = (newPost) => {
-		setPosts([...posts, newPost]) 
-	};
-
 	const removePost = (post) => {
 		setPosts(posts.filter(p => p.id !== post.id))
 	};
