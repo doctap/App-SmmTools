@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import PostForm from './Components/PostForm';
 import PostList from './Components/PostList';
-import MyInput from './Components/UI/inputs/MyInput';
 import PanelNav from './Components/UI/navigation/PanelNav';
 import MySelect from './Components/UI/selects/MySelect';
-// import ClassCounter from './Components/ClassCounter';
-// import Counter from './Components/Counter';
 import './Styles/App.scss';
 
 function App() {
@@ -15,8 +12,6 @@ function App() {
 		{ id: 3, title: 'JavaScript 3', body: 'Description' },
 	]);
 
-	const [searchQuery, setSearchQueary] = useState('');
-
 	const [selectedSort, setSelectedSort] = useState('');
 
 	const sortPosts = (sort) => {
@@ -24,10 +19,10 @@ function App() {
 		setPosts([...posts].sort((a, b) => a[sort].localeCompare(b[sort])))
 	};
 
-	const createPost = (newPost) => {
+	const createPost = (newPost) => { 
 		setPosts([...posts, newPost]) 
 	};
-
+ 
 	const removePost = (post) => {
 		setPosts(posts.filter(p => p.id !== post.id))
 	};
@@ -35,12 +30,6 @@ function App() {
 	return (
 		<div className="App">
 			<PanelNav></PanelNav>
-
-			<MyInput 
-				value={searchQuery}
-				onChange={event => setSearchQueary(event.target.value)}
-				placeholder='Search'
-			/>
 
 			<PostForm create={createPost} />
 			<MySelect 
